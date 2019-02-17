@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/txtAmount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:autofillHints="billAmount"
+        android:hint="@string/billAmount"
+        android:inputType="numberDecimal"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp" />
+
+    <EditText
+        android:id="@+id/txtPeople"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:autofillHints="peopleAmount"
+        android:hint="@string/peopleAmount"
+        android:inputType="numberDecimal"
+        android:paddingBottom="20dp" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/tenPercent"
+            android:layout_width="36dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/tenPercent" />
+
+        <RadioButton
+            android:id="@+id/fifteenPercent"
+            android:layout_width="43dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/fifteenPercent" />
+
+        <RadioButton
+            android:id="@+id/twentyPercent"
+            android:layout_width="79dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/twentyPercent" />
+
+        <EditText
+            android:id="@+id/txtTipOther"
+            android:layout_width="109dp"
+            android:layout_height="wrap_content"
+            android:autofillHints="peopleAmount"
+            android:hint="@string/otherTipAmount"
+            android:inputType="numberDecimal" />
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/calculateButton"
+        android:layout_width="155dp"
+        android:layout_height="wrap_content"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp"
+        android:text="@string/calculate" />
+
+    <Button
+        android:id="@+id/resetButton"
+        android:layout_width="155dp"
+        android:layout_height="wrap_content"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp"
+        android:text="@string/reset" />
+
+    <TextView
+        android:id="@+id/tip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tip"
+        android:paddingLeft="15dp"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/totalTip"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:paddingLeft="20dp"
+        android:text="0"/>
+
+    <TextView
+        android:id="@+id/billText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/billText"
+        android:paddingLeft="15dp"
+        android:paddingTop="15dp"
+        android:textSize="20sp"/>
+
+    <TextView
+        android:id="@+id/billTotal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:paddingLeft="20dp"
+        android:text="0" />
+
+    <TextView
+        android:id="@+id/personText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/personText"
+        android:paddingTop="15dp"
+        android:paddingLeft="15dp"
+        android:textSize="20sp"/>
+
+    <TextView
+        android:id="@+id/amountPerPerson"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:paddingLeft="20dp"
+        android:text="0" />
+
+</LinearLayout>

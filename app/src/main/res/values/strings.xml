@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">TipCalculator-counter</string>
+    <string name="billAmount">Enter Total Bill Amount...</string>
+    <string name="peopleAmount">Enter Total Persons In Group...</string>
+    <string name="otherTipAmount">Other%</string>
+    <string name="tenPercent">10%</string>
+    <string name="fifteenPercent">15%</string>
+    <string name="twentyPercent">20%</string>
+    <string name="calculate">Calculate</string>
+    <string name="reset">Reset</string>
+    <string name="tip">Tip Total:</string>
+    <string name="billText">Total Bill W/Tip:</string>
+    <string name="personText">Amount Per Person:</string>
+</resources>

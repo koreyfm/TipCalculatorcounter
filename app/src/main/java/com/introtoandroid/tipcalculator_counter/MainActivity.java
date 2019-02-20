@@ -50,27 +50,45 @@ public class MainActivity extends AppCompatActivity {
                 EditText other =  (EditText) findViewById(R.id.txtTipOther);
                 String otherPercent = other.getText().toString();
 
-                float bill = Float.valueOf(inputBill);
-                float peopleTotal = Float.valueOf(peopleAmount);
+                //float bill = Float.valueOf(inputBill);
+                //float peopleTotal = Float.valueOf(peopleAmount);
 
-                if(!(otherPercent.matches(""))) {
-                    float otherPercentInput = Float.valueOf(otherPercent);
-                }
+                //if(!(otherPercent.matches(""))) {
+                    //float otherPercentInput = Float.valueOf(otherPercent);
+                //}
 
-                if (inputBill.matches("") || bill < 1) {
+                if (inputBill.matches("")) {
 
                     Toast.makeText(getApplicationContext(), "You Did Not Enter A Valid Bill Amount...", Toast.LENGTH_SHORT).show();
                     return;
 
                 }
 
-
-                if (peopleAmount.matches("") || peopleTotal < 1) {
+                if (peopleAmount.matches("")) {
 
                     Toast.makeText(getApplicationContext(), "You Did Not Enter A Valid # Of People...", Toast.LENGTH_SHORT).show();
                     return;
 
                 }
+
+                float bill = Float.valueOf(inputBill);
+                float peopleTotal = Float.valueOf(peopleAmount);
+
+                if(bill < 1){
+                    Toast.makeText(getApplicationContext(), "You Did Not Enter A Valid Bill Amount...", Toast.LENGTH_SHORT).show();
+                    return;
+
+                }
+
+                if(peopleTotal < 1){
+
+                    Toast.makeText(getApplicationContext(), "You Did Not Enter A Valid # Of People...", Toast.LENGTH_SHORT).show();
+                    return;
+
+
+                }
+
+
 
 
 
@@ -103,27 +121,54 @@ public class MainActivity extends AppCompatActivity {
                 }
 
 
-                else{
+                else if(!(otherPercent.matches(""))){
 
+                    //if(!(otherPercent.matches(""))) {
+                        //float otherPercentInput = Float.valueOf(otherPercent);
+                    //}
                     float otherPercentInput = Float.valueOf(otherPercent);
 
-                    if (!(otherPercentInput < 1)) {
+                    if(otherPercentInput > 0){
+
                         //float otherPercentInput = Float.valueOf(otherPercent);
 
-                        tip = bill * otherPercentInput/100;
+                        tip = bill * otherPercentInput / 100;
+
+
+
+                    }
+                    else{
+
+                        Toast.makeText(getApplicationContext(), "You Must Enter Or Select A Valid %...", Toast.LENGTH_SHORT).show();
+                        return;
+                    }
+
+                    //float otherPercentInput = Float.valueOf(otherPercent);
+
+                    //if (!(otherPercentInput < 1)) {
+                        //float otherPercentInput = Float.valueOf(otherPercent);
+
+                        //tip = bill * otherPercentInput/100;
 
                         //tenPercent.setChecked(false);
                         //fifteenPercent.setChecked(false);
                         //twentyPercent.setChecked(false);
 
-                    }
+                    //}
 
-                    else{
+                    //else{
 
-                        Toast.makeText(getApplicationContext(), "You Must Enter Or Select A Valid %...", Toast.LENGTH_SHORT).show();
-                        return;
+                      //  Toast.makeText(getApplicationContext(), "You Must Enter Or Select A Valid %...", Toast.LENGTH_SHORT).show();
+                        //return;
 
-                    }
+                    //}
+                }
+
+                else{
+
+                    Toast.makeText(getApplicationContext(), "You Must Enter Or Select A Valid %...", Toast.LENGTH_SHORT).show();
+                    return;
+
                 }
 
 
